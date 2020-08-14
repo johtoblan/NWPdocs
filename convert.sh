@@ -4,4 +4,9 @@ do
     echo $name
     jupyter nbconvert --to markdown $name.ipynb  --output-dir ../NWPdocs.wiki
 done
+
+for file in $(ls notebooks/images/*)
+do
+	cp $file ../NWPdocs.wiki/images/
+done
     
